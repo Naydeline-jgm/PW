@@ -1,0 +1,60 @@
+:root{
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a9;
+    --gris: #757575;
+        }
+
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        font-size: 16px;
+    }
+    
+    .titulo{
+    text-align: center;
+    font-size: 3.8rem;
+    }
+    .titulo span{
+        font-size: 2rem;
+    }
+    
+    .navegacion-principal{
+        background-color: var(--secundario);
+        /**margin es por fuera y padding es por dentro*/
+        display: flex; /*flexbox esta diseñao para alinear elembtos en tus diseños*/
+        /**justify-content para filas/aling-items es para columnas(flex-direction)*/
+        justify-content: space-between;
+        font-weight: bold;/*poner negrita*/
+        font-size: 2rem;
+    }
+    /**al poner el curosr en elhipervinculo*/
+    .navegacion-principal a:hover{
+        background-color: var(--primario);
+        color: var(--oscuro);
+
+    }
+
+    .navegacion-principal a{
+        color: var(--blanco);
+        text-decoration: none;
+        padding: 1rem;
+    }
+    
+    .contenedor{
+        width: 120rem; /* 1200px por que 1 rem es igual a 10px */
+        /*  margin-top: 0;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto; 
+            es lo mismo que el codigo de abajo */
+        margin: 0 auto;
+    }
+    
+    .nav-bg{
+        background-color: var(--secundario);
+    }
+    
+    
