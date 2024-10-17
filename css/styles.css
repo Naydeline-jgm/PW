@@ -4,6 +4,7 @@
     --primario: #ffc107;
     --secundario: #0097a9;
     --gris: #757575;
+    --grisClaro: #b6b6b6;
         }
 
     html{
@@ -11,37 +12,39 @@
     }
     body{
         font-size: 16px;
+        font-family: 'Krub', sans-serif;
+        background: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
+   
+    }
+    /*tipografias*/
+    h1{
+        font-size: 3.8rem;
+
+    }
+    h2{
+        font-size: 2.8rem;
+
+    }
+    h3{
+        font-size: 1.8rem;
+
+    }
+    h1,h2,h3 {
+        text-align: center;
     }
     
-    /*Se aplica desde 0 pixeles*/
-    body {
-        background-color: bisque;
-    }
-    /**recpmendado
-    480 ppx para movile
-    768 para tablets*/
-
-    @media (min-width: 480px){
-        body {
-            background-color: blue;
-        }
-    }
-     
-    @media (min-width: 768px){
-        body {
-            background-color: cornflowerblue ;
-        }
-    }
-    .titulo{
-    text-align: center;
-    font-size: 3.8rem;
-    }
-    .titulo span{
+    .titulo span {
         font-size: 2rem;
     }
+    .titulo{
+        text-align: center;
+    }
+
+
+    
     
     .navegacion-principal{
-        background-color: var(--secundario);
+        
         /**margin es por fuera y padding es por dentro*/
         display: flex; /*flexbox esta diseñao para alinear elembtos en tus diseños*/
         /**justify-content para filas/aling-items es para columnas(flex-direction)*/
@@ -72,7 +75,7 @@
     }
     
     .contenedor{
-        width: 120rem; /* 1200px por que 1 rem es igual a 10px */
+        max-width: 120rem; /* 1200px por que 1 rem es igual a 10px */
         /*  margin-top: 0;
             margin-bottom: 0;
             margin-left: auto;
@@ -88,6 +91,46 @@
         background-image: url(../img/hero.jpg); /**es para regresar un nivel de direcctorio ya que la carpeta esta fuera del css*/
         background-repeat: no-repeat; /* Sirve para evitar la repetición de la imagen cuando es pequeña*/
         background-size: cover; /* Sirve para cubrir la imagen con todo el tamaño*/
+        height: 450px; /*alto del elemento hero*/
+        position: relative; /*para manipular la posicion. El padre siempre debe ser ralativo*/
     }
-    
-    
+    .contenido-hero{
+        position: absolute; /*para manipular la posicion. El hijo siempre debe ser absoluto*/
+        background-color: rgba(0,0,0,.7);
+        width: 100%;
+        height: 100%;
+        /*alinear texto vertical y horzontalmnete*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+            
+    }
+    .Ubicacion {
+        display: flex;
+        align-items: flex-end;
+    }
+    .contenido-hero p,
+    .contenido-hero h2{
+        color: var(--blanco);
+    }
+    .boton{
+        background-color: var(--secundario);
+        color: var(--blanco);
+        padding: 1rem 3rem;
+        font-size: 2rem;
+        text-decoration: none; /*para quitar la linea*/
+        text-transform: uppercase; /*convertir el texto en mayuscula*/
+        font-weight: bold; /*negritas*/
+        border-radius: 0.5rem;
+        text-align: center;
+        margin-top: 3rem;
+        border-radius: .5rem;
+        width: 90%;
+        text-align: center;
+    }
+    @media (min-width:768px) {
+        .boton{
+            width: auto;
+        }
+    }
